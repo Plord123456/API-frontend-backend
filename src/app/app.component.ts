@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {Store} from "@ngrx/store";
+import {Observable} from "rxjs";
+import {ProfileService} from "./service/profile.service";
 
 @Component({
   selector: 'app-root',
@@ -9,5 +12,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'untitled2';
+  title = 'ngrx-effect';
+
+  constructor(public profileService: ProfileService) {
+  }
 }
+
